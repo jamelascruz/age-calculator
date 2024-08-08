@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  background-color: var(--white);
+}
+:root {
+  --black: #111111;
+  --darkgrey: #2f2f2f;
+  --white: #f6f6f6;
+  --yellow: #ffcb74;
+}
+.text {
+  margin-top: 45px;
+  margin-bottom: 0;
+  height: auto;
+  font-size: 65px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+.sub-text {
+  margin: 0;
+  font-size: 19px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.input-box {
+  margin: 15px 0;
+  padding: 25px;
+  border-radius: 12px;
+  background: var(--darkgrey);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.input-box input {
+  flex: 1;
+  margin-right: 20px;
+  padding: 14px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  position: relative;
+  border-radius: 12px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  background: #f6f6f6;
+  cursor: pointer;
+}
+.input-box button {
+  border-radius: 12px;
+  background: #ffcb74;
+  border: 0;
+  outline: 0;
+  padding: 15px 30px;
+  cursor: pointer;
+  color: var(--black);
+  font-size: 18px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+.input-box input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+.result {
+  display: flex;
+  margin: 15px 0;
+  padding: 25px;
+  border-radius: 12px;
+  background: var(--darkgrey);
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.left-side,
+.right-side {
+  margin: 0 20px;
+}
+.column {
+  flex-basis: 48%; /* Adjust the width of columns as needed */
+}
+.column p {
+  color: var(--white);
+  font-size: 13px;
+  text-align: center;
+}
+.column span {
+  font-family: "Baloo Bhaijaan 2", cursive;
+  font-size: 20px;
+}
+/*
+.result::after {
+  content: "";
+  background-color: var(--white);
+  position: absolute;
+  width: 1px;
+  height: 255px;
+  top: 10px;
+  left: 50%;
+  display: block;
+}*/
+#years,
+#months,
+#days,
+.sum {
+  color: #ffcb74;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  width: fit-content;
+}
+
+span {
+  color: var(--white);
+  font-size: 30px;
+}
+#downloadButton {
+  border-radius: 12px;
+  background: #ffcb74;
+  border: 0;
+  outline: 0;
+  padding: 15px 30px;
+  cursor: pointer;
+  color: var(--black);
+  font-size: 18px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+.generation {
+ 
+    font-family: "Baloo Bhaijaan 2", cursive;
+    font-size: 20px;
+  margin: -12px;
+  color: var(--darkgrey);
+}
+#genID {
+  font-weight: 600;
+  color: var(--black);
+}
+@media only screen and (max-width: 500px) {
+  .text {
+    margin-top: 15px;
+    margin-bottom: 0;
+    height: 65px;
+    font-size: 45px;
+    font-family: "Baloo Bhaijaan 2", cursive;
+  }
+  .sub-text {
+    font-size: 15px;
+    flex-wrap: wrap;
+    margin: 10px 64px;
+  }
+  .input-box {
+    margin: 0 34px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .input-box input {
+    margin-right: 20px;
+    padding: 8px 15px;
+    font-size: 12px;
+    position: relative;
+    border-radius: 8px;
+    font-family: "Baloo Bhaijaan 2", cursive;
+
+    background: #f6f6f6;
+    cursor: pointer;
+  }
+  .input-box button {
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-family: "Baloo Bhaijaan 2", cursive;
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 34px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .left-side,
+  .right-side {
+    margin: 0;
+  }
+  .column p {
+    font-size: 10px;
+  }
+  .column span {
+    font-size: 15px;
+  }
+  .column {
+    flex-basis: 100%; /* Adjust the width of columns as needed */
+  }
+  #years,
+  #months,
+  #days,
+  .sum {
+    color: #ffcb74;
+    font-family: "Baloo Bhaijaan 2", cursive;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    width: fit-content;
+  }
+
+  span {
+    color: var(--white);
+    font-size: 25px;
+  }
+  #downloadButton {
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-family: "Baloo Bhaijaan 2", cursive;
+  }
+  .generation {
+   
+      font-family: "Baloo Bhaijaan 2", cursive;
+      font-size: 15px;
+    margin: -12px;
+    color: var(--darkgrey);
+  }
+
+  #genID {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--black);
+  }
+}

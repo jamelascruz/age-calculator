@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="icon" type="image/x-icon" href="clndr.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="calculator">
+        <h1 class="text">Age Calculator</h1>
+        <p class="sub-text">
+          Birthdays, anniversaries, and more - all at your fingertips.
+        </p>
+        <div class="input-box">
+          <input type="date" id="date" />
+          <button id="submit" onclick="calculateAge()">Calculate</button>
+        </div>
+
+        <div class="downloadable" style="display: none">
+          <div class="result">
+            <div class="left-side">
+              <p id="years">--<span> Year</span></p>
+              <p id="months">--<span> Month</span></p>
+              <p id="days">--<span> Day</span></p>
+            </div>
+            <div class="right-side row">
+              <h1 class="sum">Summary</h1>
+              <div class="column">
+                <p>
+                  <span id="Year">Years</span> <br /><span id="diffYear"
+                    >--</span
+                  >
+                </p>
+                <p>
+                  <span id="Month">Months</span> <br /><span id="diffMonth"
+                    >--</span
+                  >
+                </p>
+                <p>
+                  <span id="Week">Weeks</span> <br /><span id="diffWeek"
+                    >--</span
+                  >
+                </p>
+              </div>
+              <div class="column">
+                <p>
+                  <span id="Day">Days</span> <br /><span id="diffDay">--</span>
+                </p>
+                <p>
+                  <span id="Hour">Hours</span> <br /><span id="diffHour"
+                    >--</span
+                  >
+                </p>
+                <p>
+                  <span id="Minute">Minutes</span> <br /><span id="diffMinute"
+                    >--</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="generation">
+            <p>You are a<span id="genID">--</span></p>
+          </div>
+          <button id="downloadButton">Download as Image</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    var spans = document.querySelectorAll('[id^="diff"]');
+
+   
+    for (var i = 0; i < spans.length; i++) {
+      var value = spans[i].textContent;
+      value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      spans[i].textContent = value;
+    }
+  });
+    </script>
+  </body>
+</html>
